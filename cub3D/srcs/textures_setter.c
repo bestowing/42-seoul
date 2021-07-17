@@ -6,7 +6,7 @@
 /*   By: chelee <chelee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 01:47:10 by chelee            #+#    #+#             */
-/*   Updated: 2021/02/26 16:14:29 by chelee           ###   ########.fr       */
+/*   Updated: 2021/07/17 12:05:43 by chelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 static void	set_textures_floor_and_ceiling(t_game *game)
 {
 	game->floor.img_ptr = mlx_xpm_file_to_image(game->mlx_ptr,
-		"./textures/wood.xpm", &game->floor.width, &game->floor.height);
+		"./textures/floor.xpm", &game->floor.width, &game->floor.height);
 	if (game->floor.img_ptr != NULL)
 		game->floor.data = (int *)mlx_get_data_addr(game->floor.img_ptr,
 			&(game->floor.bpp), &(game->floor.size_l), &(game->floor.endian));
 	game->ceiling.img_ptr = mlx_xpm_file_to_image(game->mlx_ptr,
-		"./textures/sand.xpm", &game->ceiling.width, &game->ceiling.height);
+		"./textures/ceiling.xpm", &game->ceiling.width, &game->ceiling.height);
 	if (game->floor.img_ptr != NULL)
 		game->ceiling.data = (int *)mlx_get_data_addr(game->ceiling.img_ptr,
 			&(game->ceiling.bpp), &(game->ceiling.size_l),
